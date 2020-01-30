@@ -1,6 +1,6 @@
 import { toBool } from './handlers';
 const googleSpreadsheet = require('google-spreadsheet');
-import creds from'./google_client_secret.json';
+import creds from './google_client_secret.json';
 
 function loadData() {
   return new Promise((resolve, reject) => {
