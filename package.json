@@ -5,13 +5,16 @@
   "license": "MIT",
   "scripts": {
     "dev": "tsc-watch --onSuccess \" node dist/index.js\" ",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "deploy": "forever stop dist/index.js && tsc && forever start dist/index.js"
   },
   "dependencies": {
     "@slack/rtm-api": "^5.0.3",
     "@slack/web-api": "^5.7.0",
     "dotenv": "^8.2.0",
     "fs": "^0.0.1-security",
-    "google-spreadsheet": "^2.0.8"
+    "global": "^4.4.0",
+    "google-spreadsheet": "^2.0.8",
+    "typescript": "^3.8.3"
   }
 }
