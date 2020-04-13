@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsc-watch --onSuccess \" node dist/index.js\" ",
     "start": "node dist/index.js",
-    "deploy": "forever stop dist/index.js && tsc && forever start dist/index.js"
+    "deploy": "if forever list | grep 'dist/index.js'; then forever stop dist/index.js; fi && tsc && forever start dist/index.js"
   },
   "dependencies": {
     "@slack/rtm-api": "^5.0.3",
